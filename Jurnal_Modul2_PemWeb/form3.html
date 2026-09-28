@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Mahasiswa</title>
+</head>
+<body>
+
+    <h3>Data Mahasiswa</h3>
+
+    <!-- Atribut onsubmit memanggil fungsi JavaScript sebelum data benar-benar dikirim -->
+    <form action="" method="POST" onsubmit="return validasiHobi()">
+        <table border="0" cellpadding="5">
+            <tr>
+                <td>NIM</td>
+                <td>:</td>
+                <!-- Wajib diisi menggunakan atribut 'required' -->
+                <td><input type="text" name="nim" required></td>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td>Tgl Lahir (dd-mm-yyyy)</td>
+                <td>:</td>
+                <td><input type="date" name="tgl_lahir" required></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td>
+                    <!-- Name harus sama agar hanya bisa dipilih salah satu -->
+                    <input type="radio" name="jenis_kelamin" value="Laki-Laki" required> Laki-Laki
+                    <input type="radio" name="jenis_kelamin" value="Perempuan" required> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Alamat di Bandung</td>
+                <td valign="top">:</td>
+                <!-- Textarea tidak butuh required berdasarkan instruksi -->
+                <td><textarea name="alamat" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td valign="top">Tinggal di</td>
+                <td valign="top">:</td>
+                <td>
+                    <!-- Option pertama diberi value kosong agar fungsi 'required' bekerja -->
+                    <select name="tempat_tinggal" required >
+                        <option value="">--pilih--</option>
+                        <option value="Kos/Kontrakan">Kos/Kontrakan</option>
+                        <option value="Rumah saudara">Rumah saudara</option>
+                        <option value="Rumah orang tua">Rumah orang tua</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Pilih 2 hobi yang paling disukai</td>
+                <td valign="top">:</td>
+                <td>
+                    <input type="checkbox" name="hobi" value="Science"> Science<br>
+                    <input type="checkbox" name="hobi" value="Technology"> Technology<br>
+                    <input type="checkbox" name="hobi" value="Art"> Art<br>
+                    <input type="checkbox" name="hobi" value="Sport"> Sport
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <!-- JavaScript untuk memvalidasi jumlah checkbox hobi -->
+    <script>
+        function validasiHobi() {
+            // Mencari semua checkbox dengan nama 'hobi' yang sedang dicentang
+            var hobiDicentang = document.querySelectorAll('input[name="hobi"]:checked');
+            
+            // Mengecek apakah jumlahnya persis 2
+            if (hobiDicentang.length !== 2) {
+                alert("Peringatan: Anda harus memilih tepat 2 hobi!");
+                return false; // Membatalkan pengiriman form
+            }
+            return true; // Mengizinkan pengiriman form
+        }
+    </script>
+
+</body>
+</html>

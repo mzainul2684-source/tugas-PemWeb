@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabel Susunan Warna</title>
+</head>
+<body>
+
+    <!-- Tabel dengan border putih -->
+    <table border="1" bordercolor="white" cellspacing="0" cellpadding="0">
+        
+        <!-- Baris 1 -->
+        <tr>
+            <!-- Kolom 1: Biru kiri memanjang ke bawah (7 baris) -->
+            <td rowspan="7" bgcolor="blue" width="50"></td>
+            
+            <!-- Kolom 2, 3, 4: Biru atas memanjang (3 kolom) -->
+            <td colspan="3" bgcolor="blue" height="50"></td>
+            
+            <!-- Kolom 5: Kosong -->
+            <td width="50"></td>
+        </tr>
+        
+        <!-- Baris 2 -->
+        <tr>
+            <!-- Kolom 2: Hijau kecil -->
+            <td bgcolor="#00FF00" width="50" height="50"></td>
+            
+            <!-- Kolom 3 & 4: Hijau besar (Gabung 2 kolom & 2 baris) -->
+            <td colspan="2" rowspan="2" bgcolor="#00FF00"></td>
+            
+            <!-- Kolom 5: Biru di kanan (Gabung 2 baris ke bawah) -->
+            <td rowspan="2" bgcolor="blue"></td>
+        </tr>
+        
+        <!-- Baris 3 -->
+        <tr>
+            <!-- Kolom 2: Putih di bawah hijau kecil -->
+            <td bgcolor="white" height="50"></td>
+        </tr>
+        
+        <!-- Baris 4 -->
+        <tr>
+            <!-- Kolom 2: Biru bawah kiri -->
+            <td bgcolor="blue" height="50"></td>
+            
+            <!-- Kolom 3: Area putih kosong -->
+            <td width="50"></td>
+            
+            <!-- Kolom 4: Biru bawah kanan -->
+            <td bgcolor="blue" width="50"></td>
+            
+            <!-- Kolom 5: Area putih kosong -->
+            <td width="50"></td>
+        </tr>
+        
+        <!-- Baris 5, 6, 7 dibiarkan dengan sel kosong untuk mempertahankan grid -->
+        <!-- Baris 5 -->
+        <tr>
+            <td height="50"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- Baris 6 -->
+        <tr>
+            <td height="50"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+        <!-- Baris 7 -->
+        <tr>
+            <td height="50"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
