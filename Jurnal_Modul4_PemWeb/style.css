@@ -1,0 +1,340 @@
+/* Pengaturan dasar */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f7f3;
+    color: #183c29;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* HALAMAN LOGIN */
+.login-page {
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e5f1e8;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 30px;
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h1 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.login-description {
+    margin: 0 0 24px;
+    color: #5b7062;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b8cbbd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font: inherit;
+}
+
+.form-group input:focus {
+    background-color: #d9f5e2;
+    border-color: #217a42;
+    outline: 2px solid #83dba0;
+    outline-offset: 1px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+    background-color: #217a42;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #123722;
+}
+
+.navbar {
+    max-width: 1100px;
+    min-height: 70px;
+    margin: 0 auto;
+    padding: 14px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-menu a:hover {
+    background-color: #a3edb6;
+    color: #123722;
+}
+
+/* PEMBUNGKUS KONTEN */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 28px 24px 40px;
+}
+
+/* HOME */
+.hero {
+    min-height: 340px;
+    padding: 40px 24px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+    background-color: #123722;
+    background-image:
+        linear-gradient(
+            rgba(5, 24, 12, 0.65),
+            rgba(5, 24, 12, 0.65)
+        ),
+        url("images/banner.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.highlight {
+    color: #a3edb6;
+    font-size: 42px;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* COLLECTIONS */
+.collections {
+    padding-top: 36px;
+}
+
+.collections h2,
+.about h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+.section-description {
+    margin: 0 0 20px;
+    color: #5b7062;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 16px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+}
+
+.product-info p {
+    margin: 0;
+    color: #5b7062;
+    font-size: 14px;
+}
+
+/* ABOUT */
+.about {
+    margin-top: 36px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.about p {
+    margin: 0;
+}
+
+/* FOOTER */
+.site-footer {
+    padding: 20px;
+    background-color: #123722;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* TAMPILAN LAYAR DI BAWAH 768 PX */
+@media (max-width: 767px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 4px;
+    }
+
+    .nav-menu a {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 20px 16px 30px;
+    }
+
+    .hero {
+        min-height: 260px;
+        padding: 30px 18px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .highlight {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 15px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+}
