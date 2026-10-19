@@ -1,124 +1,22 @@
-
 # Tugas Praktikum Modul 5 - Bootstrap
 
 ## 1. Pengertian Bootstrap
 
-**Pertanyaan:** Jelaskan apa itu Bootstrap dan apa kegunaannya!
-
-**Jawaban:**
-
-Bootstrap adalah framework frontend yang membantu kita membuat tampilan website dengan lebih mudah dan cepat. Bootstrap menyediakan berbagai komponen dan class CSS yang siap digunakan, seperti navbar, tombol, form, card, dan grid.
-
-Dengan Bootstrap, kita tidak perlu membuat semua desain dari awal menggunakan CSS manual. Kita cukup menggunakan class yang sudah disediakan untuk mengatur tampilan website.
-
-Selain itu, Bootstrap juga bisa digunakan untuk membuat website responsif, sehingga tampilannya dapat menyesuaikan ukuran layar laptop, tablet, maupun HP.
+Bootstrap adalah framework frontend yang digunakan untuk mempermudah kita dalam membuat tampilan website. Di dalam Bootstrap sudah tersedia berbagai komponen dan class CSS yang bisa langsung digunakan, seperti navbar, tombol, form, card, dan grid. Jadi, kita tidak perlu membuat semua desain dari awal menggunakan CSS sendiri. Selain mempermudah pengerjaan, Bootstrap juga membantu membuat website menjadi responsif, sehingga tampilannya bisa menyesuaikan ukuran layar perangkat seperti laptop, tablet, maupun HP.
 
 ## 2. Memasang Bootstrap
 
-**Pertanyaan:** Sebutkan cara-cara untuk mengimpor atau menggunakan Bootstrap pada project!
-
-**Jawaban:**
-
-Ada beberapa cara untuk menggunakan Bootstrap dalam project, yaitu:
-
-1. **Menggunakan CDN**
-
-   Kita cukup menambahkan link CSS dan JavaScript Bootstrap ke dalam file HTML. Cara ini paling gampang karena kita tidak perlu mengunduh atau menginstal Bootstrap secara manual. Namun, kita membutuhkan koneksi internet untuk memuat filenya.
-
-2. **Download Bootstrap**
-
-   Kita bisa mengunduh file CSS dan JavaScript dari website resmi Bootstrap, lalu menyimpannya di folder project. File tersebut kemudian dihubungkan ke HTML.
-
-3. **Menggunakan NPM**
-
-   Bootstrap bisa diinstal melalui terminal menggunakan perintah:
-
-   `npm install bootstrap@5.3.8`
-
-   Cara ini biasanya digunakan pada project yang menggunakan Node.js.
-
-4. **Menggunakan package manager lain**
-
-   Selain NPM, Bootstrap juga dapat dipasang menggunakan Yarn atau pnpm.
-
-Pada tugas ini, saya menggunakan CDN karena lebih sederhana, mudah dan cocok untuk project HTML yang masih dasar.
+Ada beberapa cara untuk menggunakan Bootstrap dalam sebuah project. Cara pertama adalah menggunakan CDN, yaitu dengan menambahkan link CSS dan JavaScript Bootstrap ke dalam file HTML tanpa perlu mengunduhnya terlebih dahulu. Cara kedua adalah dengan mengunduh file Bootstrap dari website resminya, lalu menyimpannya di folder project agar bisa digunakan secara lokal. Selain itu, Bootstrap juga bisa diinstal menggunakan NPM melalui perintah `npm install bootstrap@5.3.8` atau menggunakan package manager lain seperti Yarn dan pnpm. Untuk tugas ini, saya menggunakan CDN karena caranya lebih praktis dan tidak memerlukan proses instalasi tambahan.
 
 ## 3. Grid dan Breakpoint
 
-**Pertanyaan:** Jelaskan mengenai class grid dan kegunaan breakpoint!
-
-**Jawaban:**
-
-Grid adalah sistem layout yang disediakan Bootstrap untuk mengatur susunan dan lebar elemen pada halaman website. Sistem grid Bootstrap menggunakan 12 kolom yang bisa dibagi sesuai kebutuhan.
-
-Beberapa class yang biasa digunakan adalah:
-
-- `container` untuk membungkus dan mengatur lebar konten.
-- `row` untuk membuat baris.
-- `col` untuk membuat kolom.
-- `col-6` untuk membuat kolom dengan lebar setengah dari total 12 kolom.
-
-Sementara itu, breakpoint digunakan untuk menentukan kapan tampilan website perlu berubah berdasarkan ukuran layar perangkat.
-
-Berikut breakpoint yang tersedia di Bootstrap:
-
-| Breakpoint | Ukuran Layar |
-|------------|--------------|
-| xs | Kurang dari 576px |
-| sm | Mulai 576px |
-| md | Mulai 768px |
-| lg | Mulai 992px |
-| xl | Mulai 1200px |
-| xxl | Mulai 1400px |
-
-Contohnya, class `col-12 col-md-6` membuat elemen memiliki lebar penuh pada layar kecil. Ketika ukuran layar mencapai 768px, lebarnya berubah menjadi setengah dari baris.
-
-Jadi, grid dan breakpoint membantu kita membuat tampilan website lebih rapi dan tetap nyaman digunakan di berbagai perangkat.
+Grid adalah sistem layout pada Bootstrap yang digunakan untuk mengatur susunan dan lebar elemen dalam sebuah halaman website. Bootstrap menggunakan sistem 12 kolom yang bisa kita bagi sesuai kebutuhan. Beberapa class yang sering digunakan adalah `container` untuk membungkus konten, `row` untuk membuat baris, dan `col` untuk mengatur kolom. Sementara itu, breakpoint digunakan untuk menentukan perubahan tampilan berdasarkan ukuran layar perangkat. Bootstrap memiliki beberapa breakpoint, yaitu `xs` untuk layar di bawah 576px, `sm` mulai 576px, `md` mulai 768px, `lg` mulai 992px, `xl` mulai 1200px, dan `xxl` mulai 1400px. Contohnya, ketika kita menggunakan class `col-12 col-md-6`, elemen akan memiliki lebar penuh pada layar kecil dan berubah menjadi setengah lebar ketika ukuran layar mencapai 768px. Dengan adanya grid dan breakpoint, tampilan website bisa tetap rapi meskipun dibuka menggunakan perangkat yang berbeda.
 
 ## 4. Class Bootstrap
 
-**Pertanyaan:** Sebutkan minimal lima class Bootstrap beserta kegunaannya!
-
-**Jawaban:**
-
-Bootstrap menyediakan banyak class yang bisa langsung digunakan untuk mengatur tampilan website. Berikut beberapa contohnya:
-
-| Class | Kegunaan |
-|-------|----------|
-| `container` | Mengatur lebar konten agar lebih rapi. |
-| `row` | Membuat baris dalam sistem grid. |
-| `col-md-6` | Membuat kolom selebar setengah baris mulai layar medium. |
-| `btn` | Memberikan tampilan dasar pada tombol. |
-| `btn-success` | Membuat tombol berwarna hijau. |
-| `bg-light` | Memberikan warna latar belakang terang. |
-| `text-center` | Membuat teks berada di tengah. |
-| `form-control` | Mengatur tampilan input pada form. |
-| `card` | Membuat wadah konten berbentuk kartu. |
-| `mt-3` | Memberikan jarak luar pada bagian atas elemen. |
-
-Dengan class tersebut, kita bisa mengatur tampilan website tanpa harus menulis banyak CSS sendiri.
+Bootstrap menyediakan banyak class yang bisa kita gunakan untuk mengatur tampilan website tanpa harus menulis CSS secara manual. Contohnya, class `container` digunakan untuk mengatur lebar konten agar lebih rapi, sedangkan `row` digunakan untuk membuat baris dalam sistem grid. Ada juga `col-md-6` yang digunakan untuk membuat kolom dengan lebar setengah baris pada layar berukuran medium ke atas. Untuk membuat tombol, kita bisa menggunakan class `btn`, lalu menambahkan `btn-success` jika ingin memberikan warna hijau. Selain itu, class `bg-light` digunakan untuk memberikan warna latar belakang terang, `text-center` untuk membuat teks berada di tengah, `form-control` untuk mengatur tampilan input, `card` untuk membuat kotak konten, dan `mt-3` untuk memberikan jarak pada bagian atas elemen. Dengan menggunakan class-class tersebut, kita bisa membuat tampilan website dengan lebih cepat dan mudah.
 
 ## 5. Gambar Responsif
 
-**Pertanyaan:** Bagaimana cara agar foto atau gambar pada website responsif menyesuaikan ukuran layar perangkat?
-
-**Jawaban:**
-
-Agar gambar bisa menyesuaikan ukuran layar, kita dapat menggunakan class `img-fluid` dari Bootstrap.
-
-Class ini membuat gambar mengikuti lebar elemen pembungkusnya dan menjaga perbandingan ukuran gambar agar tidak terlihat gepeng atau melebar secara berlebihan.
-
-Contoh penggunaannya:
-
-```html
-<img src="gambar.jpg" class="img-fluid" alt="Contoh gambar">
-```
-
-Pada kode tersebut:
-
-- `src` digunakan untuk menentukan lokasi gambar.
-- `img-fluid` digunakan agar gambar responsif.
-- `alt` digunakan untuk memberikan deskripsi gambar.
-
-Jadi, dengan menggunakan `img-fluid`, gambar dapat menyesuaikan ukuran layar secara otomatis tanpa harus mengatur lebar dan tingginya secara manual untuk setiap perangkat.
+Agar gambar pada website bisa menyesuaikan ukuran layar perangkat, kita dapat menggunakan class `img-fluid` yang sudah disediakan Bootstrap. Class ini membuat gambar mengikuti lebar elemen pembungkusnya tanpa melebihi ukuran aslinya, sehingga gambar tidak keluar dari area yang tersedia. Selain itu, tinggi gambar akan menyesuaikan secara otomatis agar bentuknya tetap proporsional. Contoh penggunaannya adalah `<img src="gambar.jpg" class="img-fluid" alt="Contoh gambar">`. Pada kode tersebut, `src` digunakan untuk menentukan lokasi gambar, `img-fluid` membuat gambar responsif, dan `alt` memberikan deskripsi gambar. Jadi, dengan menggunakan class ini, kita nggak perlu mengatur ukuran gambar secara manual untuk setiap perangkat.
 
